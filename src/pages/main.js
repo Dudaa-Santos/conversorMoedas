@@ -165,14 +165,14 @@ const Main = () => {
           }}
         >
           {toCurrency && <CountryFlag isoCode={toCurrency.slice(0, 2)} size={18} />}
-          <Text style={[styles.selectedCurrencyText, !fromCurrency && { color: '#535353' }]}>
-               {fromCurrency || 'Selecione'}
+          <Text style={[styles.selectedCurrencyText, !toCurrency && { color: '#535353' }]}>
+               {toCurrency || 'Selecione'}
           </Text>
           <MaterialIcons name="arrow-drop-down" size={24} color="#535353" />
         </TouchableOpacity>
       </View>
 
-      {/* Modal para selecionar moeda */}
+      {/* modal para selecionar moeda */}
       {isPickerVisible && (
         <Modal
           visible={isPickerVisible}
